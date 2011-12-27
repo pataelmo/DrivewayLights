@@ -7437,11 +7437,13 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="LED5" gate="G$1" pin="RC"/>
 <wire x1="144.78" y1="5.08" x2="142.24" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="5.08" x2="142.24" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="!OUT1"/>
 <wire x1="142.24" y1="2.54" x2="139.7" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="2.54" x2="119.38" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="-15.24" x2="139.7" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="!OUT3"/>
+<wire x1="119.38" y1="7.62" x2="127" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="127" y1="7.62" x2="127" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="127" y1="2.54" x2="139.7" y2="2.54" width="0.1524" layer="91"/>
 <junction x="139.7" y="2.54"/>
 </segment>
 </net>
@@ -7463,12 +7465,15 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="LED5" gate="G$1" pin="BC"/>
 <wire x1="144.78" y1="15.24" x2="137.16" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="15.24" x2="137.16" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="!OUT3"/>
 <wire x1="137.16" y1="7.62" x2="129.54" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="7.62" x2="119.38" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="-15.24" x2="129.54" y2="7.62" width="0.1524" layer="91"/>
-<junction x="129.54" y="7.62"/>
+<wire x1="129.54" y1="-15.24" x2="129.54" y2="0" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="0" x2="129.54" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="0" x2="124.46" y2="0" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="0" x2="124.46" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="!OUT1"/>
+<wire x1="124.46" y1="2.54" x2="119.38" y2="2.54" width="0.1524" layer="91"/>
+<junction x="129.54" y="0"/>
 </segment>
 </net>
 <net name="N$22" class="0">
