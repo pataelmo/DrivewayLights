@@ -7128,6 +7128,14 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="139.7" y1="-48.26" x2="139.7" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="4"/>
+<wire x1="-25.4" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="16"/>
+<wire x1="-25.4" y1="-22.86" x2="-33.02" y2="-22.86" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
@@ -7266,11 +7274,23 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <junction x="68.58" y="5.08"/>
 <junction x="91.44" y="17.78"/>
 </segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="2"/>
+<wire x1="-25.4" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="15"/>
+<wire x1="-25.4" y1="-20.32" x2="-33.02" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SBWTCK" class="0">
 <segment>
 <wire x1="55.88" y1="43.18" x2="-73.66" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="J12" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="1"/>
+<wire x1="-25.4" y1="15.24" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7401,6 +7421,10 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="-35.56" x2="134.62" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="10"/>
+<wire x1="-25.4" y1="-7.62" x2="-35.56" y2="-7.62" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$25" class="0">
 <segment>
@@ -7494,12 +7518,20 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="-55.88" y1="30.48" x2="-58.42" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="30.48" x2="-55.88" y2="20.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="30"/>
+<wire x1="43.18" y1="-5.08" x2="50.8" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VBLUE_SCALED" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="129.54" y1="-38.1" x2="129.54" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="29"/>
+<wire x1="43.18" y1="-7.62" x2="50.8" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RF_SOMI" class="0">
@@ -7550,12 +7582,9 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="139.7" y1="-38.1" x2="139.7" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="VWHITE_SCALE" class="0">
 <segment>
-<pinref part="R9" gate="G$1" pin="1"/>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="-35.56" x2="144.78" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="U0" gate="G$1" pin="9"/>
+<wire x1="-25.4" y1="-5.08" x2="-35.56" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_SDA" class="0">
@@ -7578,10 +7607,21 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="-25.4" y1="-15.24" x2="-35.56" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="VWHITE_SCALED" class="0">
 <segment>
-<pinref part="U0" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="15.24" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="U0" gate="G$1" pin="8"/>
+<wire x1="-25.4" y1="-2.54" x2="-35.56" y2="-2.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="144.78" y1="-35.56" x2="144.78" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$38" class="0">
+<segment>
+<pinref part="U0" gate="G$1" pin="7"/>
+<wire x1="-25.4" y1="0" x2="-33.02" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/pataelmo/Documents/Projects/Boards/Driveway_Lights/First_Board.brd
 
-Start at      : 12:11:10 (12/24/2011)
-End at        : 12:11:22 (12/24/2011)
-Elapsed time  : 00:00:12
+Start at      : 19:13:51 (12/27/2011)
+End at        : 19:13:53 (12/27/2011)
+Elapsed time  : 00:00:02
 
-Signals       :    42   RoutingGrid: 7 mil  Layers: 2
-Connections   :   103   predefined:  0 ( 0 Vias )
+Signals       :    53   RoutingGrid: 7 mil  Layers: 2
+Connections   :   129   predefined:  123 ( 69 Vias )
 
-Router memory :   673816
+Router memory :   715040
 
 Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:03  00:00:02  00:00:02  00:00:03  00:00:02
-Number of Ripups  :         3         0         0         0         0
+Time per pass     :  00:00:00  00:00:01  00:00:00  00:00:00  00:00:01
+Number of Ripups  :         0         0         0         0         0
 max. Level        :         1         0         0         0         0
-max. Total        :        29         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :       103       103       103       103       103
-Vias              :        68        46        44        44        44
-Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+Routed            :         5         5         5         5         5
+Vias              :        11         8         8         8         8
+Resolution        :    99.2 %    99.2 %    99.2 %    99.2 %    99.2 %
 
-Final             : 100.0% finished
+Final             : 99.2% finished
