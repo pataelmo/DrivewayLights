@@ -7128,6 +7128,14 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="139.7" y1="-48.26" x2="139.7" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="4"/>
+<wire x1="-25.4" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="16"/>
+<wire x1="-25.4" y1="-22.86" x2="-33.02" y2="-22.86" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
@@ -7266,11 +7274,23 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <junction x="68.58" y="5.08"/>
 <junction x="91.44" y="17.78"/>
 </segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="2"/>
+<wire x1="-25.4" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="15"/>
+<wire x1="-25.4" y1="-20.32" x2="-33.02" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SBWTCK" class="0">
 <segment>
 <wire x1="55.88" y1="43.18" x2="-73.66" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="J12" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<pinref part="U0" gate="G$1" pin="1"/>
+<wire x1="-25.4" y1="15.24" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7587,12 +7607,6 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="-25.4" y1="-15.24" x2="-35.56" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="U0" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="15.24" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="VWHITE_SCALED" class="0">
 <segment>
 <pinref part="U0" gate="G$1" pin="8"/>
@@ -7602,6 +7616,12 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="R9" gate="G$1" pin="1"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="-35.56" x2="144.78" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$38" class="0">
+<segment>
+<pinref part="U0" gate="G$1" pin="7"/>
+<wire x1="-25.4" y1="0" x2="-33.02" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
