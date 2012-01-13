@@ -8618,7 +8618,7 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <parts>
 <part name="U4" library="texas2" deviceset="TPS62111" device="RSA"/>
 <part name="L1" library="inductors" deviceset="NRS8030" device=""/>
-<part name="C1" library="rcl" deviceset="C-US" device="C0805" value="10uF"/>
+<part name="C1" library="rcl" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="C2" library="rcl" deviceset="C-US" device="C0805" value="22uF"/>
 <part name="C3" library="rcl" deviceset="C-US" device="C0603" value="1uF"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
@@ -8699,9 +8699,14 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="P+10" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="R16" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="B1" library="rectifier" deviceset="B*S" device="" technology="6"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="C4" library="rcl" deviceset="C-US" device="C0603"/>
+<part name="L2" library="rcl" deviceset="R-US_" device="R0603"/>
+<part name="C8" library="rcl" deviceset="C-US" device="C0603"/>
+<part name="C9" library="rcl" deviceset="C-US" device="C0603"/>
+<part name="C10" library="rcl" deviceset="C-US" device="C0603"/>
+<part name="C11" library="rcl" deviceset="C-US" device="C1210" value="22uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -8711,18 +8716,18 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <instances>
 <instance part="U4" gate="G$1" x="5.08" y="104.14"/>
 <instance part="L1" gate="G$1" x="30.48" y="111.76"/>
-<instance part="C1" gate="G$1" x="-68.58" y="83.82"/>
+<instance part="C1" gate="G$1" x="-60.96" y="86.36"/>
 <instance part="C2" gate="G$1" x="63.5" y="99.06"/>
 <instance part="C3" gate="G$1" x="-20.32" y="99.06"/>
 <instance part="GND1" gate="1" x="-7.62" y="76.2"/>
 <instance part="GND2" gate="1" x="20.32" y="73.66"/>
 <instance part="GND3" gate="1" x="63.5" y="88.9"/>
-<instance part="GND4" gate="1" x="-68.58" y="76.2"/>
+<instance part="GND4" gate="1" x="-60.96" y="76.2"/>
 <instance part="J1" gate="G$1" x="38.1" y="96.52"/>
 <instance part="U3" gate="G$1" x="-99.06" y="-5.08" rot="MR0"/>
 <instance part="GND5" gate="1" x="-129.54" y="-25.4"/>
 <instance part="P+1" gate="G$1" x="63.5" y="111.76"/>
-<instance part="P+2" gate="G$1" x="-119.38" y="7.62"/>
+<instance part="P+2" gate="G$1" x="-134.62" y="12.7"/>
 <instance part="GND8" gate="1" x="-38.1" y="22.86"/>
 <instance part="R1" gate="G$1" x="-55.88" y="50.8" rot="R90"/>
 <instance part="P+5" gate="G$1" x="-55.88" y="58.42"/>
@@ -8792,9 +8797,14 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <instance part="GND18" gate="1" x="-53.34" y="-109.22"/>
 <instance part="P+10" gate="G$1" x="40.64" y="-50.8"/>
 <instance part="GND19" gate="1" x="40.64" y="-63.5"/>
-<instance part="R16" gate="G$1" x="86.36" y="-17.78" rot="R90"/>
 <instance part="B1" gate="G$1" x="-88.9" y="88.9"/>
 <instance part="GND20" gate="1" x="-99.06" y="83.82"/>
+<instance part="C4" gate="G$1" x="-121.92" y="-7.62"/>
+<instance part="L2" gate="G$1" x="-127" y="5.08"/>
+<instance part="C8" gate="G$1" x="53.34" y="-53.34"/>
+<instance part="C9" gate="G$1" x="53.34" y="-81.28"/>
+<instance part="C10" gate="G$1" x="53.34" y="-106.68"/>
+<instance part="C11" gate="G$1" x="-73.66" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -8815,6 +8825,10 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="-60.96" y1="81.28" x2="-60.96" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="78.74" x2="-73.66" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="2"/>
+<wire x1="-73.66" y1="78.74" x2="-73.66" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -8850,12 +8864,15 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="GND"/>
-<wire x1="-116.84" y1="-15.24" x2="-127" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="-15.24" x2="-121.92" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-121.92" y1="-15.24" x2="-127" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-127" y1="-15.24" x2="-129.54" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="-129.54" y1="-15.24" x2="-129.54" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="-127" y1="-7.62" x2="-127" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="-121.92" y1="-12.7" x2="-121.92" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
@@ -8905,8 +8922,12 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="-20.32" x2="124.46" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-20.32" x2="124.46" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="124.46" y1="-27.94" x2="124.46" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-27.94" x2="119.38" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="119.38" y1="-27.94" x2="119.38" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -8940,11 +8961,18 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 <wire x1="40.64" y1="-86.36" x2="38.1" y2="-86.36" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="-86.36" x2="40.64" y2="-86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND16" gate="1" pin="GND"/>
 <pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="38.1" y1="-116.84" x2="38.1" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-116.84" x2="38.1" y2="-114.3" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="-114.3" x2="38.1" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-111.76" x2="53.34" y2="-114.3" width="0.1524" layer="91"/>
+<junction x="38.1" y="-114.3"/>
+<wire x1="53.34" y1="-114.3" x2="38.1" y2="-114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="T3" gate="A" pin="S"/>
@@ -8955,6 +8983,9 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="40.64" y1="-60.96" x2="38.1" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="GND"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="-58.42" x2="53.34" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-60.96" x2="40.64" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="B1" gate="G$1" pin="-"/>
@@ -8987,13 +9018,16 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <wire x1="190.5" y1="15.24" x2="190.5" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="33.02" x2="190.5" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="38.1" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
+<label x="193.04" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-68.58" y1="86.36" x2="-68.58" y2="88.9" width="0.1524" layer="91"/>
 <label x="-66.04" y="88.9" size="1.778" layer="95"/>
 <pinref part="B1" gate="G$1" pin="+"/>
-<wire x1="-83.82" y1="88.9" x2="-68.58" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="88.9" x2="-73.66" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="-73.66" y1="88.9" x2="-60.96" y2="88.9" width="0.1524" layer="91"/>
+<junction x="-73.66" y="88.9"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="VIN"/>
@@ -9001,21 +9035,21 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <pinref part="U4" gate="G$1" pin="EN"/>
 <wire x1="-5.08" y1="106.68" x2="-10.16" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="106.68" x2="-10.16" y2="111.76" width="0.1524" layer="91"/>
+<label x="-10.16" y="111.76" size="1.778" layer="95"/>
+<pinref part="U4" gate="G$1" pin="VINA"/>
+<wire x1="-5.08" y1="101.6" x2="-10.16" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="101.6" x2="-15.24" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="101.6" x2="-15.24" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="104.14" x2="-20.32" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="-20.32" y1="104.14" x2="-20.32" y2="101.6" width="0.1524" layer="91"/>
+<label x="-20.32" y="104.14" size="1.778" layer="95"/>
+<wire x1="-10.16" y1="101.6" x2="-10.16" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
 <wire x1="-68.58" y1="30.48" x2="-81.28" y2="30.48" width="0.1524" layer="91"/>
 <label x="-78.74" y="30.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="VINA"/>
-<wire x1="-5.08" y1="101.6" x2="-15.24" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="101.6" x2="-15.24" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="104.14" x2="-20.32" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="-20.32" y1="104.14" x2="-20.32" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -9086,12 +9120,6 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <junction x="-55.88" y="55.88"/>
 </segment>
 <segment>
-<pinref part="U3" gate="G$1" pin="VDD"/>
-<wire x1="-116.84" y1="5.08" x2="-119.38" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="P+2" gate="G$1" pin="3.3V"/>
-<wire x1="-119.38" y1="5.08" x2="-119.38" y2="7.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
 <wire x1="96.52" y1="17.78" x2="91.44" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="P+6" gate="G$1" pin="3.3V"/>
@@ -9127,11 +9155,17 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <pinref part="U$1" gate="G$1" pin="VS"/>
 <pinref part="P+7" gate="G$1" pin="3.3V"/>
 <wire x1="40.64" y1="-76.2" x2="38.1" y2="-76.2" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="-78.74" x2="53.34" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="-76.2" x2="40.64" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="VS"/>
 <pinref part="P+8" gate="G$1" pin="3.3V"/>
 <wire x1="38.1" y1="-99.06" x2="38.1" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-101.6" x2="53.34" y2="-101.6" width="0.1524" layer="91"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="-101.6" x2="53.34" y2="-104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IR0B" gate="G$1" pin="A"/>
@@ -9142,10 +9176,14 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <pinref part="P+10" gate="G$1" pin="3.3V"/>
 <wire x1="40.64" y1="-50.8" x2="38.1" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="VS"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="-50.8" x2="40.64" y2="-50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R16" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="-22.86" x2="96.52" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="L2" gate="G$1" pin="1"/>
+<pinref part="P+2" gate="G$1" pin="3.3V"/>
+<wire x1="-132.08" y1="5.08" x2="-134.62" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="5.08" x2="-134.62" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SBWTCK" class="0">
@@ -9549,7 +9587,7 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <label x="45.72" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="VDCOUP1" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="VDCOUP1"/>
 <pinref part="C6" gate="G$1" pin="1"/>
@@ -9693,8 +9731,9 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <net name="N$38" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="!RESET"/>
-<pinref part="R16" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="-12.7" x2="86.36" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="-12.7" x2="66.04" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="-12.7" x2="66.04" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="15.24" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$39" class="0">
@@ -9715,6 +9754,26 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 <wire x1="-106.68" y1="78.74" x2="-88.9" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="B1" gate="G$1" pin="AC2"/>
 <wire x1="-88.9" y1="78.74" x2="-88.9" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VDCOUP2" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="VDCOUP2"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="-116.84" y1="-5.08" x2="-121.92" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$42" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="VDD"/>
+<pinref part="L2" gate="G$1" pin="2"/>
+<wire x1="-116.84" y1="5.08" x2="-121.92" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="U0" gate="G$1" pin="38"/>
+<wire x1="43.18" y1="15.24" x2="53.34" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
