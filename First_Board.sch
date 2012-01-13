@@ -8512,6 +8512,100 @@ http://www.zetex.com&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="rectifier">
+<description>&lt;b&gt;Rectifiers&lt;/b&gt;&lt;p&gt;
+General Instrument, Semikron, Diotec, Fagor&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="MBS">
+<description>&lt;b&gt;Surface Mount Glass Passivated Bridge Rectifiers&lt;/b&gt;&lt;p&gt;
+Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
+<wire x1="-2.325" y1="1.975" x2="2.325" y2="1.975" width="0.254" layer="21"/>
+<wire x1="2.325" y1="1.975" x2="2.325" y2="-1.975" width="0.254" layer="21"/>
+<wire x1="2.325" y1="-1.975" x2="-2.325" y2="-1.975" width="0.254" layer="21"/>
+<wire x1="-2.325" y1="-1.975" x2="-2.325" y2="1.975" width="0.254" layer="21"/>
+<wire x1="-1.55" y1="-1.175" x2="-1" y2="-1.175" width="0.1016" layer="21"/>
+<wire x1="-1.275" y1="-1.425" x2="-1.275" y2="-0.9" width="0.1016" layer="21"/>
+<wire x1="0.99" y1="-1.175" x2="1.54" y2="-1.175" width="0.1016" layer="21"/>
+<wire x1="-1.25" y1="1.25" x2="-1.625" y2="1.25" width="0.1016" layer="21" curve="172.37185"/>
+<wire x1="-0.875" y1="1.25" x2="-1.25" y2="1.25" width="0.1016" layer="21" curve="-172.37185"/>
+<wire x1="1.25" y1="1.25" x2="1.625" y2="1.25" width="0.1016" layer="21" curve="172.37185"/>
+<wire x1="0.875" y1="1.25" x2="1.25" y2="1.25" width="0.1016" layer="21" curve="-172.37185"/>
+<smd name="+" x="-1.27" y="-3" dx="1" dy="1.3" layer="1"/>
+<smd name="-" x="1.27" y="-3" dx="1" dy="1.3" layer="1"/>
+<smd name="AC2" x="1.27" y="3" dx="1" dy="1.3" layer="1" rot="R180"/>
+<smd name="AC1" x="-1.27" y="3" dx="1" dy="1.3" layer="1" rot="R180"/>
+<text x="-2.885" y="-4.175" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="5.155" y="-4.425" size="1.778" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.65" y1="2.075" x2="-0.875" y2="3.505" layer="51" rot="R180"/>
+<rectangle x1="0.89" y1="2.075" x2="1.665" y2="3.505" layer="51" rot="R180"/>
+<rectangle x1="0.875" y1="-3.505" x2="1.65" y2="-2.075" layer="51"/>
+<rectangle x1="-1.665" y1="-3.505" x2="-0.89" y2="-2.075" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="DB">
+<wire x1="-1.905" y1="-3.175" x2="-4.064" y2="-2.794" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="-3.175" x2="-2.286" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-2.7178" y1="-4.0386" x2="-0.9398" y2="-2.2606" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="3.175" x2="-4.064" y2="2.794" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="3.175" x2="-2.286" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-2.7178" y1="4.0386" x2="-1.0668" y2="2.3876" width="0.254" layer="94"/>
+<wire x1="3.175" y1="1.905" x2="2.794" y2="4.064" width="0.254" layer="94"/>
+<wire x1="3.175" y1="1.905" x2="1.016" y2="2.286" width="0.254" layer="94"/>
+<wire x1="2.3622" y1="1.016" x2="4.1402" y2="2.794" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.905" x2="2.794" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.905" x2="1.016" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="2.3622" y1="-1.0668" x2="4.1402" y2="-2.8448" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.175" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="-1.905" y2="-3.175" width="0.1524" layer="94"/>
+<wire x1="-3.2766" y1="-1.8034" x2="-5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="-4.064" y1="-2.794" x2="-2.286" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-3.2766" y2="1.8034" width="0.1524" layer="94"/>
+<wire x1="-4.064" y1="2.794" x2="-2.286" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="3.175" x2="0" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="5.08" x2="1.8034" y2="3.2766" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="2.286" x2="2.794" y2="4.064" width="0.254" layer="94"/>
+<wire x1="3.175" y1="1.905" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="1.8034" y2="-3.2766" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-2.286" x2="2.794" y2="-4.064" width="0.254" layer="94"/>
+<text x="5.08" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<text x="5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<pin name="AC1" x="0" y="5.08" visible="off" length="point" direction="pas" rot="R270"/>
+<pin name="+" x="5.08" y="0" visible="off" length="point" direction="pas" rot="R180"/>
+<pin name="AC2" x="0" y="-5.08" visible="off" length="point" direction="pas" rot="R90"/>
+<pin name="-" x="-5.08" y="0" visible="off" length="point" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="B*S" prefix="B">
+<description>&lt;b&gt;Surface Mount Glass Passivated Bridge Rectifiers&lt;/b&gt;&lt;p&gt;
+Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
+<gates>
+<gate name="G$1" symbol="DB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MBS">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+<connect gate="G$1" pin="AC1" pad="AC1"/>
+<connect gate="G$1" pin="AC2" pad="AC2"/>
+</connects>
+<technologies>
+<technology name="05"/>
+<technology name="1"/>
+<technology name="10"/>
+<technology name="2"/>
+<technology name="4"/>
+<technology name="6"/>
+<technology name="8"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8605,6 +8699,9 @@ http://www.zetex.com&lt;p&gt;
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="P+10" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="R16" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
+<part name="B1" library="rectifier" deviceset="B*S" device="" technology="6"/>
+<part name="GND20" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8614,13 +8711,13 @@ http://www.zetex.com&lt;p&gt;
 <instances>
 <instance part="U4" gate="G$1" x="5.08" y="104.14"/>
 <instance part="L1" gate="G$1" x="30.48" y="111.76"/>
-<instance part="C1" gate="G$1" x="-68.58" y="109.22"/>
+<instance part="C1" gate="G$1" x="-68.58" y="83.82"/>
 <instance part="C2" gate="G$1" x="63.5" y="99.06"/>
 <instance part="C3" gate="G$1" x="-20.32" y="99.06"/>
 <instance part="GND1" gate="1" x="-7.62" y="76.2"/>
 <instance part="GND2" gate="1" x="20.32" y="73.66"/>
 <instance part="GND3" gate="1" x="63.5" y="88.9"/>
-<instance part="GND4" gate="1" x="-68.58" y="101.6"/>
+<instance part="GND4" gate="1" x="-68.58" y="76.2"/>
 <instance part="J1" gate="G$1" x="38.1" y="96.52"/>
 <instance part="U3" gate="G$1" x="-99.06" y="-5.08" rot="MR0"/>
 <instance part="GND5" gate="1" x="-129.54" y="-25.4"/>
@@ -8653,7 +8750,7 @@ http://www.zetex.com&lt;p&gt;
 <instance part="R10" gate="G$1" x="144.78" y="-40.64" rot="R90"/>
 <instance part="R11" gate="G$1" x="-63.5" y="30.48" rot="R180"/>
 <instance part="R12" gate="G$1" x="-48.26" y="30.48" rot="R180"/>
-<instance part="J11" gate="G$1" x="-88.9" y="111.76" rot="R90"/>
+<instance part="J11" gate="G$1" x="-111.76" y="91.44" rot="R90"/>
 <instance part="J12" gate="G$1" x="-76.2" y="40.64" rot="R90"/>
 <instance part="GND11" gate="1" x="-68.58" y="35.56"/>
 <instance part="GND12" gate="1" x="144.78" y="-53.34"/>
@@ -8695,6 +8792,9 @@ http://www.zetex.com&lt;p&gt;
 <instance part="GND18" gate="1" x="-53.34" y="-109.22"/>
 <instance part="P+10" gate="G$1" x="40.64" y="-50.8"/>
 <instance part="GND19" gate="1" x="40.64" y="-63.5"/>
+<instance part="R16" gate="G$1" x="86.36" y="-17.78" rot="R90"/>
+<instance part="B1" gate="G$1" x="-88.9" y="88.9"/>
+<instance part="GND20" gate="1" x="-99.06" y="83.82"/>
 </instances>
 <busses>
 </busses>
@@ -8715,10 +8815,6 @@ http://www.zetex.com&lt;p&gt;
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="-68.58" y1="104.14" x2="-81.28" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="104.14" x2="-81.28" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="J11" gate="G$1" pin="1"/>
-<wire x1="-81.28" y1="111.76" x2="-86.36" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -8860,6 +8956,12 @@ http://www.zetex.com&lt;p&gt;
 <wire x1="40.64" y1="-60.96" x2="38.1" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="B1" gate="G$1" pin="-"/>
+<wire x1="-93.98" y1="88.9" x2="-99.06" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+<wire x1="-99.06" y1="88.9" x2="-99.06" y2="86.36" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
@@ -8887,11 +8989,11 @@ http://www.zetex.com&lt;p&gt;
 <wire x1="190.5" y1="38.1" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J11" gate="G$1" pin="2"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-68.58" y1="111.76" x2="-68.58" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="114.3" x2="-86.36" y2="114.3" width="0.1524" layer="91"/>
-<label x="-66.04" y="114.3" size="1.778" layer="95"/>
+<wire x1="-68.58" y1="86.36" x2="-68.58" y2="88.9" width="0.1524" layer="91"/>
+<label x="-66.04" y="88.9" size="1.778" layer="95"/>
+<pinref part="B1" gate="G$1" pin="+"/>
+<wire x1="-83.82" y1="88.9" x2="-68.58" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="VIN"/>
@@ -9040,6 +9142,10 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="P+10" gate="G$1" pin="3.3V"/>
 <wire x1="40.64" y1="-50.8" x2="38.1" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="VS"/>
+</segment>
+<segment>
+<pinref part="R16" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="-22.86" x2="96.52" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SBWTCK" class="0">
@@ -9582,6 +9688,33 @@ http://www.zetex.com&lt;p&gt;
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
 <pinref part="T3" gate="A" pin="D"/>
+</segment>
+</net>
+<net name="N$38" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="!RESET"/>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="-12.7" x2="86.36" y2="-12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$39" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="AC1"/>
+<wire x1="-88.9" y1="93.98" x2="-88.9" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="96.52" x2="-106.68" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="96.52" x2="-106.68" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="J11" gate="G$1" pin="2"/>
+<wire x1="-106.68" y1="93.98" x2="-109.22" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$40" class="0">
+<segment>
+<pinref part="J11" gate="G$1" pin="1"/>
+<wire x1="-109.22" y1="91.44" x2="-106.68" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="91.44" x2="-106.68" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="78.74" x2="-88.9" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="AC2"/>
+<wire x1="-88.9" y1="78.74" x2="-88.9" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
