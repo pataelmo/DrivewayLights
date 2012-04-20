@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14,7 +14,7 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
@@ -34,7 +34,7 @@
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -116,7 +116,6 @@
 <circle x="34.925" y="34.925" radius="34.925" width="0.4064" layer="20"/>
 <circle x="34.925" y="34.925" radius="17.4625" width="0.4064" layer="19"/>
 <rectangle x1="23.4696" y1="55.8292" x2="46.9392" y2="62.0522" layer="16"/>
-<rectangle x1="13.1572" y1="62.4078" x2="56.007" y2="70.0532" layer="41"/>
 <rectangle x1="12.9794" y1="62.23" x2="56.3626" y2="70.0532" layer="42"/>
 </plain>
 <libraries>
@@ -1755,20 +1754,9 @@ Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf</description>
 </class>
 </classes>
 <designrules>
-<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
-&lt;p&gt;
-Die Standard-Design-Rules sind so gewählt, dass sie für 
-die meisten Anwendungen passen. Sollte ihre Platine 
-besondere Anforderungen haben, treffen Sie die erforderlichen
-Einstellungen hier und speichern die Design Rules unter 
-einem neuen Namen ab.</description>
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
+8 mil rules - Gold Phoenix</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
@@ -1784,10 +1772,10 @@ design rules under a new name.</description>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
 <param name="mdCopperDimension" value="40mil"/>
-<param name="mdDrill" value="8mil"/>
+<param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="8mil"/>
-<param name="msDrill" value="15mil"/>
+<param name="msWidth" value="10mil"/>
+<param name="msDrill" value="24mil"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -1816,10 +1804,10 @@ design rules under a new name.</description>
 <param name="psFirst" value="-1"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
-<param name="mvStopFrame" value="1"/>
+<param name="mvStopFrame" value="0.1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="0mil"/>
+<param name="mlMaxStopFrame" value="20mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
 <param name="mlViaStopLimit" value="0mil"/>
@@ -1931,85 +1919,233 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U4" library="texas2" package="S-PVQFN-N16" value="TPS62111RSA" x="39.8526" y="34.7218"/>
+<element name="U4" library="texas2" package="S-PVQFN-N16" value="TPS62111RSA" x="39.8526" y="34.7218" smashed="yes">
+<attribute name="NAME" x="36.3286" y="37.2138" size="1.27" layer="25"/>
+</element>
 <element name="L1" library="inductors" package="NRS8030" value="NRS8030" x="34.925" y="34.925" rot="MR0"/>
 <element name="C1" library="rcl" package="C0805" value="1uF" x="55.3466" y="54.5846"/>
 <element name="C2" library="rcl" package="C0805" value="22uF" x="35.7886" y="26.3144" rot="MR180"/>
-<element name="C3" library="rcl" package="C0603" value="1uF" x="41.6814" y="31.115"/>
-<element name="J1" library="rcl" package="R0603" value="" x="8.6868" y="36.0934" rot="MR0"/>
-<element name="U3" library="anaren" package="A1101" value="A1101" x="35.0266" y="64.0334"/>
-<element name="R1" library="rcl" package="R0603" value="47k" x="9.9314" y="35.3314" rot="R270"/>
+<element name="C3" library="rcl" package="C0603" value="1uF" x="41.6814" y="31.115" smashed="yes">
+<attribute name="NAME" x="43.8404" y="30.988" size="1.27" layer="25"/>
+<attribute name="VALUE" x="41.0464" y="29.21" size="1.27" layer="27"/>
+</element>
+<element name="J1" library="rcl" package="R0603" value="" x="8.7122" y="36.0934" rot="MR0"/>
+<element name="U3" library="anaren" package="A1101" value="A1101" x="35.0266" y="64.0334" smashed="yes">
+<attribute name="NAME" x="26.1456" y="65.2664" size="1.778" layer="25"/>
+</element>
+<element name="R1" library="rcl" package="R0603" value="47k" x="9.9314" y="35.3314" smashed="yes" rot="R270">
+<attribute name="NAME" x="11.0236" y="34.6964" size="1.27" layer="25"/>
+<attribute name="VALUE" x="8.0264" y="35.9664" size="1.27" layer="27" rot="R270"/>
+</element>
 <element name="J2" library="rcl" package="R0603" value="" x="11.4046" y="36.0934" rot="MR0"/>
-<element name="U1" library="texas" package="PW_R-PDSO-G20" value="TLC59108PW" x="58.8264" y="48.4378" rot="R90"/>
-<element name="R2" library="rcl" package="R0603" value="625" x="38.481" y="29.21"/>
+<element name="U1" library="texas" package="PW_R-PDSO-G20" value="TLC59108PW" x="58.8264" y="48.4378" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.4144" y="44.3738" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="61.3664" y="53.5178" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R2" library="rcl" package="R0603" value="625" x="38.481" y="29.21" smashed="yes">
+<attribute name="NAME" x="35.306" y="26.543" size="1.27" layer="25"/>
+<attribute name="VALUE" x="37.846" y="27.305" size="1.27" layer="27"/>
+</element>
 <element name="LED1" library="led" package="SUPERFLUX-7.6X7.6" value="" x="51.054" y="34.9504" smashed="yes" rot="R270">
-<attribute name="NAME" x="51.544" y="30.9554" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="55.608" y="30.4474" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="47.244" y="29.2354" size="1.27" layer="27"/>
 </element>
-<element name="LED2" library="led" package="SUPERFLUX-7.6X7.6" value="" x="35.1028" y="18.6182" rot="R180"/>
-<element name="LED3" library="led" package="SUPERFLUX-7.6X7.6" value="" x="18.796" y="34.9504" rot="R90"/>
-<element name="LED4" library="led" package="SUPERFLUX-7.6X7.6" value="" x="35.1028" y="51.054"/>
-<element name="LED5" library="led" package="CLP6C" value="CLP6C" x="47.8282" y="46.8376" rot="R180"/>
-<element name="LED6" library="led" package="CLP6C" value="CLP6C" x="22.6568" y="47.1932" rot="R270"/>
-<element name="LED7" library="led" package="CLP6C" value="CLP6C" x="22.3266" y="22.8346"/>
-<element name="LED8" library="led" package="CLP6C" value="CLP6C" x="48.4378" y="23.9014" rot="R90"/>
-<element name="R3" library="rcl" package="R0603" value="51k" x="45.2882" y="54.7116"/>
-<element name="R4" library="rcl" package="R0603" value="10k" x="41.8846" y="54.61"/>
-<element name="R5" library="rcl" package="R0603" value="51k" x="45.2882" y="51.8922"/>
-<element name="R6" library="rcl" package="R0603" value="10k" x="41.8846" y="51.8922"/>
-<element name="R7" library="rcl" package="R0603" value="51k" x="50.4444" y="41.7068"/>
-<element name="R8" library="rcl" package="R0603" value="10k" x="46.609" y="41.7068"/>
-<element name="R9" library="rcl" package="R0603" value="51k" x="56.642" y="38.5318" rot="R270"/>
-<element name="R10" library="rcl" package="R0603" value="10k" x="56.7182" y="41.9354" rot="R270"/>
-<element name="R11" library="rcl" package="R0603" value="51k" x="37.0332" y="46.3804"/>
-<element name="R12" library="rcl" package="R0603" value="10k" x="32.9438" y="46.2788"/>
-<element name="J11" library="con-amp" package="10X02MTA" value="" x="41.1734" y="42.3164" rot="R270"/>
-<element name="J12" library="con-amp" package="10X04MTA" value="" x="4.5974" y="35.0266" rot="R90"/>
-<element name="U0" library="TI_MSP430_v16" package="DA38" value="F22X4---DA38" x="11.3792" y="47.2948" rot="R90"/>
-<element name="IR1B" library="led" package="LED5MM" value="" x="12.6746" y="12.6492" rot="R315"/>
-<element name="IR1A" library="led" package="LED5MM" value="" x="4.3688" y="26.8224" rot="R105"/>
-<element name="IR2B" library="led" package="LED5MM" value="" x="57.1246" y="12.7508" rot="R45"/>
-<element name="IR2A" library="led" package="LED5MM" value="" x="65.3288" y="26.7462" rot="R75"/>
-<element name="R13" library="rcl" package="R0603" value="10" x="9.4996" y="28.1178" rot="R180"/>
-<element name="R14" library="rcl" package="R0603" value="10" x="66.9036" y="31.1404" rot="R270"/>
-<element name="T1" library="zetex" package="SOT-23" value="" x="10.5156" y="25.0444" rot="R180">
+<element name="LED2" library="led" package="SUPERFLUX-7.6X7.6" value="" x="35.1028" y="18.6182" smashed="yes" rot="R180">
+<attribute name="NAME" x="37.5158" y="13.3858" size="1.27" layer="25"/>
+<attribute name="VALUE" x="29.3878" y="22.4282" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="LED3" library="led" package="SUPERFLUX-7.6X7.6" value="" x="18.796" y="34.9504" smashed="yes" rot="R90">
+<attribute name="NAME" x="27.432" y="34.5694" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="22.606" y="40.6654" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="LED4" library="led" package="SUPERFLUX-7.6X7.6" value="" x="35.1028" y="51.054" smashed="yes">
+<attribute name="NAME" x="30.226" y="54.0258" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="40.8178" y="47.244" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="LED5" library="led" package="CLP6C" value="CLP6C" x="47.8282" y="46.8376" smashed="yes" rot="R180">
+<attribute name="NAME" x="51.9242" y="51.5758" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="51.9242" y="51.2514" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="LED6" library="led" package="CLP6C" value="CLP6C" x="22.6568" y="47.1932" smashed="yes" rot="R270">
+<attribute name="NAME" x="20.5928" y="51.1926" size="1.27" layer="25"/>
+<attribute name="VALUE" x="18.243" y="51.2892" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="LED7" library="led" package="CLP6C" value="CLP6C" x="22.3266" y="22.8346" smashed="yes">
+<attribute name="NAME" x="17.9716" y="19.2466" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="18.2306" y="18.4208" size="1.27" layer="27"/>
+</element>
+<element name="LED8" library="led" package="CLP6C" value="CLP6C" x="48.4378" y="23.9014" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.9646" y="24.474" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="52.8516" y="19.8054" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R3" library="rcl" package="R0603" value="51k" x="45.2882" y="54.7116" smashed="yes">
+<attribute name="NAME" x="44.1452" y="55.6006" size="1.27" layer="25"/>
+<attribute name="VALUE" x="44.6532" y="52.8066" size="1.27" layer="27"/>
+</element>
+<element name="R4" library="rcl" package="R0603" value="10k" x="41.8846" y="54.61" smashed="yes">
+<attribute name="NAME" x="40.7416" y="55.753" size="1.27" layer="25"/>
+<attribute name="VALUE" x="41.2496" y="52.705" size="1.27" layer="27"/>
+</element>
+<element name="R5" library="rcl" package="R0603" value="51k" x="45.2882" y="51.8922" smashed="yes">
+<attribute name="NAME" x="42.3672" y="49.7332" size="1.27" layer="25"/>
+<attribute name="VALUE" x="44.6532" y="49.9872" size="1.27" layer="27"/>
+</element>
+<element name="R6" library="rcl" package="R0603" value="10k" x="41.8846" y="51.8922" smashed="yes">
+<attribute name="NAME" x="38.4556" y="49.4792" size="1.27" layer="25"/>
+<attribute name="VALUE" x="41.2496" y="49.9872" size="1.27" layer="27"/>
+</element>
+<element name="R7" library="rcl" package="R0603" value="51k" x="50.4444" y="41.7068" smashed="yes">
+<attribute name="NAME" x="49.3014" y="39.2938" size="1.27" layer="25"/>
+<attribute name="VALUE" x="49.8094" y="39.8018" size="1.27" layer="27"/>
+</element>
+<element name="R8" library="rcl" package="R0603" value="10k" x="46.609" y="41.7068" smashed="yes">
+<attribute name="NAME" x="45.466" y="39.2938" size="1.27" layer="25"/>
+<attribute name="VALUE" x="45.974" y="39.8018" size="1.27" layer="27"/>
+</element>
+<element name="R9" library="rcl" package="R0603" value="51k" x="56.642" y="38.5318" smashed="yes" rot="R270">
+<attribute name="NAME" x="57.8612" y="38.989" size="1.27" layer="25"/>
+<attribute name="VALUE" x="54.737" y="39.1668" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R10" library="rcl" package="R0603" value="10k" x="56.7182" y="41.9354" smashed="yes" rot="R270">
+<attribute name="NAME" x="57.7596" y="41.3512" size="1.27" layer="25"/>
+<attribute name="VALUE" x="54.8132" y="42.5704" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R11" library="rcl" package="R0603" value="51k" x="37.0332" y="46.3804" smashed="yes">
+<attribute name="NAME" x="39.1922" y="47.0154" size="1.27" layer="25"/>
+<attribute name="VALUE" x="36.3982" y="44.4754" size="1.27" layer="27"/>
+</element>
+<element name="R12" library="rcl" package="R0603" value="10k" x="32.9438" y="46.2788" smashed="yes">
+<attribute name="NAME" x="27.4828" y="45.8978" size="1.27" layer="25"/>
+<attribute name="VALUE" x="32.3088" y="44.3738" size="1.27" layer="27"/>
+</element>
+<element name="J11" library="con-amp" package="10X02MTA" value="" x="41.1734" y="42.3164" smashed="yes" rot="R270">
+<attribute name="NAME" x="40.9194" y="45.2882" size="1.27" layer="25"/>
+<attribute name="VALUE" x="43.3243" y="44.8625" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="J12" library="con-amp" package="10X04MTA" value="" x="4.5974" y="35.0266" smashed="yes" rot="R90">
+<attribute name="NAME" x="1.0414" y="36.5506" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="2.4465" y="30.0505" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U0" library="TI_MSP430_v16" package="DA38" value="F22X4---DA38" x="11.3792" y="47.2948" smashed="yes" rot="R90">
+<attribute name="NAME" x="5.5102" y="43.8122" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="13.2742" y="43.9098" size="1.27" layer="27" ratio="10" rot="R90"/>
+</element>
+<element name="IR1B" library="led" package="LED5MM" value="" x="12.6746" y="12.6492" smashed="yes" rot="R315">
+<attribute name="NAME" x="9.708834375" y="12.30530625" size="1.27" layer="25" ratio="10" rot="R315"/>
+<attribute name="VALUE" x="13.662428125" y="9.110978125" size="1.27" layer="27" ratio="10" rot="R315"/>
+</element>
+<element name="IR1A" library="led" package="LED5MM" value="" x="4.3688" y="26.8224" smashed="yes" rot="R105">
+<attribute name="NAME" x="3.793821875" y="24.671159375" size="1.27" layer="25" ratio="10" rot="R105"/>
+<attribute name="VALUE" x="5.282425" y="30.380503125" size="1.27" layer="27" ratio="10" rot="R105"/>
+</element>
+<element name="IR2B" library="led" package="LED5MM" value="" x="57.1246" y="12.7508" smashed="yes" rot="R45">
+<attribute name="NAME" x="57.468490625" y="9.785034375" size="1.27" layer="25" ratio="10" rot="R45"/>
+<attribute name="VALUE" x="60.66281875" y="13.738628125" size="1.27" layer="27" ratio="10" rot="R45"/>
+</element>
+<element name="IR2A" library="led" package="LED5MM" value="" x="65.3288" y="26.7462" smashed="yes" rot="R75">
+<attribute name="NAME" x="67.159325" y="24.109065625" size="1.27" layer="25" ratio="10" rot="R75"/>
+<attribute name="VALUE" x="67.899075" y="29.37079375" size="1.27" layer="27" ratio="10" rot="R75"/>
+</element>
+<element name="R13" library="rcl" package="R0603" value="10" x="9.4996" y="28.1178" smashed="yes" rot="R180">
+<attribute name="NAME" x="9.8806" y="30.5308" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="10.1346" y="30.0228" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R14" library="rcl" package="R0603" value="10" x="66.9036" y="31.1404" smashed="yes" rot="R270">
+<attribute name="NAME" x="62.4586" y="29.4386" size="1.27" layer="25"/>
+<attribute name="VALUE" x="64.9986" y="31.7754" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="T1" library="zetex" package="SOT-23" value="" x="10.5156" y="25.0444" smashed="yes" rot="R180">
 <attribute name="OC_NEWARK" value="unknown" x="10.5156" y="25.0444" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="10.5156" y="25.0444" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="10.5156" y="25.0444" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="10.5156" y="25.0444" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="11.9126" y="23.2664" size="1.27" layer="27" ratio="10" rot="R180"/>
+<attribute name="NAME" x="8.8646" y="26.0604" size="1.27" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="T2" library="zetex" package="SOT-23" value="" x="65.024" y="33.528" rot="R90">
+<element name="T2" library="zetex" package="SOT-23" value="" x="65.024" y="33.528" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="65.024" y="33.528" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="65.024" y="33.528" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="65.024" y="33.528" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="65.024" y="33.528" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="63.246" y="32.131" size="1.27" layer="27" ratio="10" rot="R90"/>
+<attribute name="NAME" x="66.421" y="36.576" size="1.27" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="U$1" library="opto-vishay" package="TSOP39338" value="TSOP39338" x="7.1882" y="18.9992" rot="R300"/>
-<element name="U$2" library="opto-vishay" package="TSOP39338" value="TSOP39338" x="62.5348" y="19.0754" rot="R60"/>
-<element name="C5" library="rcl" package="C0603" value="" x="18.4912" y="42.1386" rot="R90"/>
-<element name="C6" library="rcl" package="C0603" value="" x="27.3812" y="60.452" rot="R270"/>
-<element name="C7" library="rcl" package="C0603" value="" x="43.815" y="29.3624"/>
+<element name="U$1" library="opto-vishay" package="TSOP39338" value="TSOP39338" x="7.1882" y="18.9992" smashed="yes" rot="R300">
+<attribute name="NAME" x="10.813725" y="16.632996875" size="1.27" layer="25" ratio="10" rot="R210"/>
+<attribute name="VALUE" x="6.48618125" y="15.338325" size="1.27" layer="27" ratio="10" rot="R300"/>
+</element>
+<element name="U$2" library="opto-vishay" package="TSOP39338" value="TSOP39338" x="62.5348" y="19.0754" smashed="yes" rot="R60">
+<attribute name="NAME" x="58.41599375" y="17.253271875" size="1.27" layer="25" ratio="10" rot="R60"/>
+<attribute name="VALUE" x="66.056215625" y="20.297871875" size="1.27" layer="27" ratio="10" rot="R60"/>
+</element>
+<element name="C5" library="rcl" package="C0603" value="" x="18.4912" y="42.1386" smashed="yes" rot="R90">
+<attribute name="NAME" x="19.4564" y="40.2082" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="20.3962" y="41.5036" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C6" library="rcl" package="C0603" value="" x="27.3812" y="60.452" smashed="yes" rot="R270">
+<attribute name="NAME" x="25.527" y="62.3062" size="1.27" layer="25"/>
+<attribute name="VALUE" x="25.4762" y="61.087" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="C7" library="rcl" package="C0603" value="" x="43.815" y="29.3624" smashed="yes">
+<attribute name="NAME" x="42.926" y="27.2034" size="1.27" layer="25"/>
+<attribute name="VALUE" x="43.18" y="27.4574" size="1.27" layer="27"/>
+</element>
 <element name="LED9" library="led" package="CLP6C" value="CLP6C" x="47.8282" y="46.7614" rot="MR0"/>
 <element name="LED10" library="led" package="CLP6C" value="CLP6C" x="22.7584" y="47.117" rot="MR270"/>
 <element name="LED11" library="led" package="CLP6C" value="CLP6C" x="22.225" y="22.9362" rot="MR180"/>
 <element name="LED12" library="led" package="CLP6C" value="CLP6C" x="48.3616" y="23.8252" rot="MR90"/>
-<element name="U$3" library="opto-vishay" package="TSOP39338" value="TSOP39338" x="34.8488" y="2.667"/>
-<element name="IR0B" library="led" package="LED5MM" value="" x="43.0022" y="4.445" rot="R180"/>
-<element name="IR0A" library="led" package="LED5MM" value="" x="26.6446" y="4.445" rot="R180"/>
-<element name="R15" library="rcl" package="R0603" value="10" x="20.9296" y="5.969"/>
-<element name="T3" library="zetex" package="SOT-23" value="" x="19.9136" y="8.89">
+<element name="U$3" library="opto-vishay" package="TSOP39338" value="TSOP39338" x="34.8488" y="2.667" smashed="yes">
+<attribute name="NAME" x="30.0228" y="5.1054" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="37.6682" y="0.2286" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="IR0B" library="led" package="LED5MM" value="" x="43.0022" y="4.445" smashed="yes" rot="R180">
+<attribute name="NAME" x="44.6532" y="3.1496" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="39.8018" y="6.2484" size="1.27" layer="27" ratio="10" rot="R180"/>
+</element>
+<element name="IR0A" library="led" package="LED5MM" value="" x="26.6446" y="4.445" smashed="yes" rot="R180">
+<attribute name="NAME" x="28.5496" y="3.4036" size="1.27" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="23.4442" y="6.2484" size="1.27" layer="27" ratio="10" rot="R180"/>
+</element>
+<element name="R15" library="rcl" package="R0603" value="10" x="20.9296" y="5.969" smashed="yes">
+<attribute name="NAME" x="21.3106" y="6.858" size="1.27" layer="25"/>
+<attribute name="VALUE" x="20.2946" y="4.064" size="1.27" layer="27"/>
+</element>
+<element name="T3" library="zetex" package="SOT-23" value="" x="19.9136" y="8.89" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="19.9136" y="4.0894" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="19.9136" y="4.0894" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="19.9136" y="4.0894" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="19.9136" y="4.0894" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="18.5166" y="10.668" size="1.27" layer="27" ratio="10"/>
+<attribute name="NAME" x="22.0726" y="9.652" size="1.27" layer="25" ratio="10"/>
 </element>
-<element name="B1" library="rectifier" package="MBS" value="B6S" x="34.1376" y="42.0116" rot="R270"/>
-<element name="C4" library="rcl" package="C0603" value="" x="42.926" y="58.166"/>
-<element name="L2" library="rcl" package="R0603" value="" x="45.72" y="60.706" rot="R180"/>
-<element name="C8" library="rcl" package="C0603" value="" x="36.068" y="6.35"/>
-<element name="C9" library="rcl" package="C0603" value="" x="11.176" y="19.558" rot="R300"/>
-<element name="C10" library="rcl" package="C0603" value="" x="60.198" y="22.86" rot="R60"/>
-<element name="C11" library="rcl" package="C1210" value="22uF" x="33.782" y="31.75" rot="R180"/>
+<element name="B1" library="rectifier" package="MBS" value="B6S" x="34.1376" y="42.0116" smashed="yes" rot="R270">
+<attribute name="NAME" x="31.4866" y="37.2766" size="1.778" layer="25" ratio="10"/>
+<attribute name="VALUE" x="29.7126" y="36.8566" size="1.778" layer="27" ratio="10"/>
+</element>
+<element name="C4" library="rcl" package="C0603" value="" x="42.926" y="58.166" smashed="yes">
+<attribute name="NAME" x="44.831" y="57.785" size="1.27" layer="25"/>
+<attribute name="VALUE" x="42.291" y="56.261" size="1.27" layer="27"/>
+</element>
+<element name="L2" library="rcl" package="R0603" value="" x="45.72" y="60.706" smashed="yes" rot="R180">
+<attribute name="NAME" x="46.609" y="63.373" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="46.355" y="62.611" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="C8" library="rcl" package="C0603" value="" x="36.068" y="6.35" smashed="yes">
+<attribute name="NAME" x="34.925" y="7.747" size="1.27" layer="25"/>
+<attribute name="VALUE" x="35.433" y="4.445" size="1.27" layer="27"/>
+</element>
+<element name="C9" library="rcl" package="C0603" value="" x="11.176" y="19.558" smashed="yes" rot="R300">
+<attribute name="NAME" x="11.154425" y="20.933425" size="1.27" layer="25" rot="R300"/>
+<attribute name="VALUE" x="9.20871875" y="19.155425" size="1.27" layer="27" rot="R300"/>
+</element>
+<element name="C10" library="rcl" package="C0603" value="" x="60.198" y="22.86" smashed="yes" rot="R60">
+<attribute name="NAME" x="58.568571875" y="22.119571875" size="1.27" layer="25" rot="R60"/>
+<attribute name="VALUE" x="61.530278125" y="21.357571875" size="1.27" layer="27" rot="R60"/>
+</element>
+<element name="C11" library="rcl" package="C1210" value="22uF" x="33.782" y="31.75" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.909" y="29.591" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="35.687" y="34.925" size="1.27" layer="27" rot="R180"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2084,10 +2220,10 @@ design rules under a new name.</description>
 <wire x1="12.954" y1="43.434" x2="15.494" y2="43.434" width="0.254" layer="1"/>
 <wire x1="8.128" y1="38.608" x2="12.954" y2="43.434" width="0.254" layer="16"/>
 <wire x1="15.494" y1="43.434" x2="15.4992" y2="43.3948" width="0.254" layer="1"/>
-<wire x1="30.734" y1="59.69" x2="29.21" y2="59.69" width="0.254" layer="1"/>
+<wire x1="29.972" y1="59.69" x2="29.21" y2="59.69" width="0.254" layer="1"/>
 <wire x1="29.21" y1="59.69" x2="27.432" y2="59.69" width="0.254" layer="1"/>
 <wire x1="27.432" y1="59.69" x2="27.3812" y2="59.602" width="0.254" layer="1"/>
-<wire x1="30.734" y1="59.69" x2="30.9166" y2="59.6334" width="0.254" layer="1"/>
+<wire x1="29.972" y1="59.69" x2="30.9166" y2="59.6334" width="0.254" layer="1"/>
 <wire x1="36.576" y1="50.8" x2="32.258" y2="46.482" width="0.254" layer="1"/>
 <wire x1="36.576" y1="54.102" x2="36.576" y2="50.8" width="0.254" layer="1"/>
 <wire x1="37.338" y1="54.864" x2="36.576" y2="54.102" width="0.254" layer="1"/>
@@ -2097,13 +2233,14 @@ design rules under a new name.</description>
 <wire x1="32.258" y1="46.482" x2="32.0938" y2="46.2788" width="0.254" layer="1"/>
 <wire x1="40.894" y1="54.61" x2="41.0346" y2="54.61" width="0.254" layer="1"/>
 <wire x1="40.386" y1="54.864" x2="43.688" y2="58.166" width="0.254" layer="1"/>
-<wire x1="41.402" y1="59.69" x2="39.37" y2="59.436" width="0.254" layer="1"/>
-<wire x1="43.688" y1="58.166" x2="41.402" y2="59.69" width="0.254" layer="1"/>
+<wire x1="40.894" y1="59.69" x2="39.37" y2="59.436" width="0.254" layer="1"/>
+<wire x1="43.688" y1="58.166" x2="42.926" y2="59.69" width="0.254" layer="1"/>
+<wire x1="42.926" y1="59.69" x2="40.894" y2="59.69" width="0.254" layer="1"/>
 <wire x1="39.37" y1="59.436" x2="39.1366" y2="59.6334" width="0.254" layer="1"/>
 <wire x1="43.688" y1="58.166" x2="43.776" y2="58.166" width="0.254" layer="1"/>
-<wire x1="41.402" y1="59.69" x2="29.21" y2="59.69" width="0.254" layer="16"/>
+<wire x1="40.894" y1="59.69" x2="29.21" y2="59.69" width="0.254" layer="16"/>
 <wire x1="29.21" y1="59.69" x2="30.9166" y2="59.6334" width="0.254" layer="1"/>
-<wire x1="41.402" y1="59.69" x2="39.1366" y2="59.6334" width="0.254" layer="1"/>
+<wire x1="40.894" y1="59.69" x2="39.1366" y2="59.6334" width="0.254" layer="1"/>
 <wire x1="41.148" y1="46.482" x2="41.148" y2="51.816" width="0.254" layer="1"/>
 <wire x1="45.72" y1="41.91" x2="43.942" y2="43.688" width="0.254" layer="1"/>
 <wire x1="43.942" y1="43.688" x2="41.148" y2="46.482" width="0.254" layer="1"/>
@@ -2262,7 +2399,7 @@ design rules under a new name.</description>
 <via x="38.608" y="27.686" extent="1-16" drill="0.6096"/>
 <via x="36.068" y="16.002" extent="1-16" drill="0.6096"/>
 <via x="19.812" y="11.684" extent="1-16" drill="0.6096"/>
-<via x="41.402" y="59.69" extent="1-16" drill="0.5"/>
+<via x="40.894" y="59.69" extent="1-16" drill="0.5"/>
 <via x="29.21" y="59.69" extent="1-16" drill="0.6" shape="octagon"/>
 </signal>
 <signal name="N$1">
@@ -2378,7 +2515,7 @@ design rules under a new name.</description>
 <wire x1="40.894" y1="36.83" x2="40.8276" y2="36.6968" width="0.254" layer="1"/>
 <wire x1="10.668" y1="36.068" x2="10.5546" y2="36.0934" width="0.254" layer="16"/>
 <wire x1="10.414" y1="36.322" x2="9.652" y2="36.322" width="0.254" layer="16"/>
-<wire x1="9.652" y1="36.322" x2="9.5368" y2="36.0934" width="0.254" layer="16"/>
+<wire x1="9.652" y1="36.322" x2="9.5622" y2="36.0934" width="0.254" layer="16"/>
 <wire x1="10.414" y1="36.322" x2="10.5546" y2="36.0934" width="0.254" layer="16"/>
 <via x="40.894" y="37.846" extent="1-16" drill="0.6096"/>
 <via x="24.638" y="29.464" extent="1-16" drill="0.6096"/>
@@ -2392,7 +2529,7 @@ design rules under a new name.</description>
 <contactref element="J12" pad="2"/>
 <contactref element="U0" pad="7"/>
 <wire x1="4.826" y1="36.322" x2="7.62" y2="36.322" width="0.254" layer="16"/>
-<wire x1="7.62" y1="36.322" x2="7.8368" y2="36.0934" width="0.254" layer="16"/>
+<wire x1="7.62" y1="36.322" x2="7.8622" y2="36.0934" width="0.254" layer="16"/>
 <wire x1="4.826" y1="36.322" x2="4.5974" y2="36.2966" width="0.254" layer="16"/>
 <wire x1="4.826" y1="36.322" x2="9.398" y2="36.322" width="0.254" layer="1"/>
 <wire x1="9.398" y1="36.322" x2="9.906" y2="36.322" width="0.254" layer="1"/>
@@ -3146,10 +3283,8 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="IR2A" pad="K"/>
 <contactref element="R14" pad="2"/>
-<wire x1="66.802" y1="29.21" x2="66.802" y2="30.226" width="0.2032" layer="1"/>
-<wire x1="65.786" y1="28.194" x2="66.802" y2="29.21" width="0.2032" layer="1"/>
-<wire x1="66.802" y1="30.226" x2="66.9036" y2="30.2904" width="0.2032" layer="1"/>
-<wire x1="65.786" y1="28.194" x2="65.6575" y2="27.972925" width="0.2032" layer="1"/>
+<wire x1="66.9036" y1="30.2904" x2="66.9036" y2="29.219025" width="0.254" layer="1"/>
+<wire x1="66.9036" y1="29.219025" x2="65.6575" y2="27.972925" width="0.254" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="IR2B" pad="K"/>
