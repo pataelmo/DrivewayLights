@@ -11804,14 +11804,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="-99.06" y1="88.9" x2="-99.06" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="0" y1="27.94" x2="-12.7" y2="27.94" width="0.1524" layer="91"/>
-<label x="-10.16" y="27.94" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="17.78" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
-<label x="40.64" y="17.78" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
 <label x="-30.48" y="48.26" size="1.778" layer="95"/>
@@ -11854,10 +11846,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="-12.7" y="88.9" size="1.778" layer="95"/>
 <pinref part="U$4" gate="G$1" pin="VO"/>
 <wire x1="-22.86" y1="88.9" x2="-7.62" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="35.56" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
-<label x="40.64" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VCC"/>
@@ -12029,8 +12017,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="-22.86" y="-99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="0" y1="12.7" x2="-15.24" y2="12.7" width="0.1524" layer="91"/>
-<label x="-12.7" y="12.7" size="1.778" layer="95"/>
+<pinref part="U2" gate="G$1" pin="GPIO5"/>
+<wire x1="35.56" y1="58.42" x2="50.8" y2="58.42" width="0.1524" layer="91"/>
+<label x="38.1" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IRLED1" class="0">
@@ -12040,8 +12029,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="-45.72" y="-99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="35.56" y1="-7.62" x2="53.34" y2="-7.62" width="0.1524" layer="91"/>
-<label x="40.64" y="-7.62" size="1.778" layer="95"/>
+<pinref part="U2" gate="G$1" pin="GPIO12"/>
+<wire x1="2.54" y1="53.34" x2="-7.62" y2="53.34" width="0.1524" layer="91"/>
+<label x="-7.62" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IR_IN2" class="0">
@@ -12051,8 +12041,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="40.64" y="-106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="35.56" y1="7.62" x2="53.34" y2="7.62" width="0.1524" layer="91"/>
-<label x="40.64" y="7.62" size="1.778" layer="95"/>
+<pinref part="U2" gate="G$1" pin="GPIO0"/>
+<wire x1="35.56" y1="55.88" x2="53.34" y2="55.88" width="0.1524" layer="91"/>
+<label x="38.1" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IR_IN1" class="0">
@@ -12062,20 +12053,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="40.64" y="-81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="35.56" y1="2.54" x2="53.34" y2="2.54" width="0.1524" layer="91"/>
-<label x="40.64" y="2.54" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IRLED0" class="0">
-<segment>
-<wire x1="35.56" y1="-10.16" x2="53.34" y2="-10.16" width="0.1524" layer="91"/>
-<label x="40.64" y="-12.7" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IR_IN0" class="0">
-<segment>
-<wire x1="35.56" y1="-2.54" x2="53.34" y2="-2.54" width="0.1524" layer="91"/>
-<label x="40.64" y="-2.54" size="1.778" layer="95"/>
+<pinref part="U2" gate="G$1" pin="GPIO13"/>
+<wire x1="2.54" y1="50.8" x2="-7.62" y2="50.8" width="0.1524" layer="91"/>
+<label x="-7.62" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RED2" class="0">
@@ -12172,9 +12152,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="!RESET"/>
 <wire x1="96.52" y1="-12.7" x2="66.04" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="-12.7" x2="66.04" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="12.7" x2="35.56" y2="12.7" width="0.1524" layer="91"/>
-<label x="40.64" y="12.7" size="1.778" layer="95"/>
+<label x="66.04" y="-12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="GPIO14"/>
+<wire x1="2.54" y1="55.88" x2="-12.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="55.88" x2="-12.7" y2="58.42" width="0.1524" layer="91"/>
+<label x="-10.16" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$39" class="0">
@@ -12235,12 +12219,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="-20.32" y="73.66" size="1.778" layer="95"/>
 <wire x1="-17.78" y1="73.66" x2="-15.24" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="73.66" x2="-20.32" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<wire x1="0" y1="33.02" x2="-12.7" y2="33.02" width="0.1524" layer="91"/>
-<label x="-10.16" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
