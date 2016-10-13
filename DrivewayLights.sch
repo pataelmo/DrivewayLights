@@ -12840,10 +12840,18 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="P+6" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0603" value="625"/>
-<part name="LED5" library="led" deviceset="CLP6C" device=""/>
-<part name="LED6" library="led" deviceset="CLP6C" device=""/>
-<part name="LED7" library="led" deviceset="CLP6C" device=""/>
-<part name="LED8" library="led" deviceset="CLP6C" device=""/>
+<part name="LED5" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
+<part name="LED6" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
+<part name="LED7" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
+<part name="LED8" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
 <part name="J11" library="con-amp" deviceset="MTA02-100" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="IR1A" library="led" deviceset="LED" device="5MM"/>
@@ -12867,10 +12875,18 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="rcl" deviceset="C-US" device="C0603"/>
-<part name="LED9" library="led" deviceset="CLP6C" device=""/>
-<part name="LED10" library="led" deviceset="CLP6C" device=""/>
-<part name="LED11" library="led" deviceset="CLP6C" device=""/>
-<part name="LED12" library="led" deviceset="CLP6C" device=""/>
+<part name="LED9" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
+<part name="LED10" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
+<part name="LED11" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
+<part name="LED12" library="led" deviceset="CLP6C" device="">
+<attribute name="EAGLEUP" value="PLCC-6-LED"/>
+</part>
 <part name="B1" library="rectifier" deviceset="B*S" device="" technology="6"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="C9" library="rcl" deviceset="C-US" device="C0603"/>
@@ -12879,17 +12895,19 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="U$4" library="rwt-library" deviceset="DCDC_OKI-78SR" device=""/>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0603" value="24k"/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
-<part name="U3" library="esp8266modules" deviceset="ESP12E" device="SMD"/>
+<part name="U3" library="esp8266modules" deviceset="ESP12E" device="SMD">
+<attribute name="EAGLEUP" value="ESP8266-12E"/>
+</part>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0603" value="1k"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-1101NE"/>
-<part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-1101NE"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="M04" device="JST-PTH-VERT"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="S3" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD"/>
+<part name="S4" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD"/>
 </parts>
 <sheets>
 <sheet>
@@ -12904,10 +12922,18 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="P+6" gate="G$1" x="91.44" y="22.86"/>
 <instance part="GND10" gate="1" x="81.28" y="-7.62"/>
 <instance part="R2" gate="G$1" x="124.46" y="-15.24" rot="R90"/>
-<instance part="LED5" gate="G$1" x="149.86" y="10.16" rot="MR90"/>
-<instance part="LED6" gate="G$1" x="180.34" y="10.16" rot="MR90"/>
-<instance part="LED7" gate="G$1" x="170.18" y="10.16" rot="MR90"/>
-<instance part="LED8" gate="G$1" x="160.02" y="10.16" rot="MR90"/>
+<instance part="LED5" gate="G$1" x="149.86" y="10.16" rot="MR90">
+<attribute name="EAGLEUP" x="149.86" y="10.16" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
+<instance part="LED6" gate="G$1" x="180.34" y="10.16" rot="MR90">
+<attribute name="EAGLEUP" x="180.34" y="10.16" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
+<instance part="LED7" gate="G$1" x="170.18" y="10.16" rot="MR90">
+<attribute name="EAGLEUP" x="170.18" y="10.16" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
+<instance part="LED8" gate="G$1" x="160.02" y="10.16" rot="MR90">
+<attribute name="EAGLEUP" x="160.02" y="10.16" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
 <instance part="J11" gate="G$1" x="-111.76" y="91.44" rot="R90"/>
 <instance part="GND15" gate="1" x="124.46" y="-53.34"/>
 <instance part="IR1A" gate="G$1" x="-30.48" y="-71.12"/>
@@ -12931,10 +12957,18 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="GND16" gate="1" x="38.1" y="-119.38"/>
 <instance part="GND17" gate="1" x="40.64" y="-88.9"/>
 <instance part="C7" gate="G$1" x="73.66" y="12.7"/>
-<instance part="LED9" gate="G$1" x="149.86" y="38.1" rot="MR90"/>
-<instance part="LED10" gate="G$1" x="180.34" y="38.1" rot="MR90"/>
-<instance part="LED11" gate="G$1" x="170.18" y="38.1" rot="MR90"/>
-<instance part="LED12" gate="G$1" x="160.02" y="38.1" rot="MR90"/>
+<instance part="LED9" gate="G$1" x="149.86" y="38.1" rot="MR90">
+<attribute name="EAGLEUP" x="149.86" y="38.1" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
+<instance part="LED10" gate="G$1" x="180.34" y="38.1" rot="MR90">
+<attribute name="EAGLEUP" x="180.34" y="38.1" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
+<instance part="LED11" gate="G$1" x="170.18" y="38.1" rot="MR90">
+<attribute name="EAGLEUP" x="170.18" y="38.1" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
+<instance part="LED12" gate="G$1" x="160.02" y="38.1" rot="MR90">
+<attribute name="EAGLEUP" x="160.02" y="38.1" size="1.778" layer="96" rot="MR90" display="off"/>
+</instance>
 <instance part="B1" gate="G$1" x="-88.9" y="88.9"/>
 <instance part="GND20" gate="1" x="-99.06" y="83.82"/>
 <instance part="C9" gate="G$1" x="53.34" y="-81.28"/>
@@ -12943,17 +12977,19 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="U$4" gate="G$1" x="-35.56" y="88.9"/>
 <instance part="R1" gate="G$1" x="-20.32" y="68.58" rot="R90"/>
 <instance part="R3" gate="G$1" x="-20.32" y="53.34" rot="R90"/>
-<instance part="U3" gate="G$1" x="78.74" y="96.52"/>
+<instance part="U3" gate="G$1" x="78.74" y="96.52">
+<attribute name="EAGLEUP" x="78.74" y="96.52" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="R4" gate="G$1" x="129.54" y="81.28" rot="R90"/>
 <instance part="R5" gate="G$1" x="121.92" y="101.6" rot="R90"/>
 <instance part="R6" gate="G$1" x="43.18" y="101.6" rot="R90"/>
 <instance part="R7" gate="G$1" x="114.3" y="101.6" rot="R90"/>
 <instance part="GND1" gate="1" x="129.54" y="73.66"/>
-<instance part="S1" gate="G$1" x="40.64" y="53.34"/>
-<instance part="S2" gate="G$1" x="40.64" y="43.18"/>
 <instance part="J1" gate="G$1" x="-25.4" y="20.32"/>
 <instance part="GND2" gate="1" x="-20.32" y="45.72"/>
 <instance part="GND3" gate="1" x="48.26" y="33.02"/>
+<instance part="S3" gate="G$1" x="40.64" y="53.34"/>
+<instance part="S4" gate="G$1" x="40.64" y="43.18"/>
 </instances>
 <busses>
 </busses>
@@ -13057,11 +13093,11 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="48.26" y1="35.56" x2="48.26" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="S2" gate="G$1" pin="2"/>
 <wire x1="48.26" y1="43.18" x2="45.72" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="53.34" x2="48.26" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="53.34" x2="48.26" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="S3" gate="G$1" pin="2"/>
+<pinref part="S4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -13511,9 +13547,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="114.3" y1="93.98" x2="114.3" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
 <label x="25.4" y="53.34" size="1.778" layer="95"/>
+<pinref part="S3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="RESET_N" class="0">
@@ -13523,9 +13559,9 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="48.26" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S2" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
 <label x="25.4" y="43.18" size="1.778" layer="95"/>
+<pinref part="S4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="ADC" class="0">
